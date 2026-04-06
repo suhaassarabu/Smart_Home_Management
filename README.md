@@ -12,7 +12,7 @@ Managing multiple smart home devices manually can be inefficient and unorganized
 
 ## 👥 Team Members
 - Suhaas Sarabu  
-- [Add your teammate name]
+- Vishnu Polamera
 
 ---
 
