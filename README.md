@@ -53,3 +53,26 @@ Managing multiple smart home devices manually can be inefficient and unorganized
 ```bash
 gcc main.c -o project
 ./project
+
+## Sample Output
+
+
+## Demo Video
+
+
+## Applications
+
+Smart home automation systems
+Device monitoring systems
+IoT-based device management
+
+## Conclusion
+
+This project demonstrates how Binary Search Trees can be effectively used to manage and control smart home devices through efficient CRUD operations in C.
+
+## Future Enhancements
+
+GUI-based interface
+Mobile app integration
+IoT connectivity
+Voice control system
