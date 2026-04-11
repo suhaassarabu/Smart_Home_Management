@@ -113,7 +113,7 @@ All devices adjusted automatically!
 
 ⚠ Note: Keep access set to private or restricted as per instructions.
 
-##Conclusion
+## Conclusion
 
 This project demonstrates how Binary Search Trees can be effectively used to manage smart home devices in an organized and efficient way.
 
