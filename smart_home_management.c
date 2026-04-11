@@ -22,6 +22,8 @@ int getPower(char name[]) {
     if (strcmp(name, "LIGHT") == 0) return 5;
     if (strcmp(name, "TV") == 0) return 15;
     if (strcmp(name, "FRIDGE") == 0) return 25;
+    if (strcmp(name, "WASHER") == 0) return 30;
+    if (strcmp(name, "HEATER") == 0) return 12;
     return 8;
 }
 
@@ -39,6 +41,13 @@ struct Device {
 // 🔹 Create Device
 struct Device* createDevice(int id, char name[], char status[], char room[], int power) {
     struct Device* newNode = (struct Device*)malloc(sizeof(struct Device));
+
+    // ✅ Memory safety check
+    if (newNode == NULL) {
+        printf("Memory allocation failed!\n");
+        exit(1);
+    }
+
     newNode->id = id;
     strcpy(newNode->name, name);
     strcpy(newNode->status, status);
@@ -57,9 +66,9 @@ struct Device* insert(struct Device* root, int id, char name[], char status[], c
         root->left = insert(root->left, id, name, status, room, power);
     else if (id > root->id)
         root->right = insert(root->right, id, name, status, room, power);
-    else {
-        printf("❌ Device ID already exists!\n");
-    }
+    else
+        printf(" Device ID already exists!\n");
+
     return root;
 }
 
@@ -67,7 +76,7 @@ struct Device* insert(struct Device* root, int id, char name[], char status[], c
 void display(struct Device* root) {
     if (root) {
         display(root->left);
-        printf("%d | %-6s | %-3s | %-8s | %d\n",
+        printf("%d | %-15s | %-3s | %-10s | %d\n",
                root->id, root->name, root->status, root->room, root->power);
         display(root->right);
     }
@@ -120,21 +129,37 @@ struct Device* deleteDevice(struct Device* root, int id) {
 // 🔹 Update
 void update(struct Device* root, int id) {
     struct Device* d = search(root, id);
+
     if (!d) {
-        printf("❌ Device not found!\n");
+        printf(" Device not found!\n");
         return;
     }
 
-    printf("New Name: "); scanf("%s", d->name);
+    char oldStatus[10];
+    strcpy(oldStatus, d->status);  // backup old status
+
+    printf("New Name: ");
+    scanf("%s", d->name);
     toUpperCase(d->name);
 
-    printf("New Status (ON/OFF): "); scanf("%s", d->status);
+    printf("New Status (ON/OFF): ");
+    scanf("%s", d->status);
     toUpperCase(d->status);
 
-    printf("New Room: "); scanf("%s", d->room);
+    // ✅ Validate status
+    if (strcmp(d->status, "ON") != 0 && strcmp(d->status, "OFF") != 0) {
+        printf("Invalid status! Keeping old value.\n");
+        strcpy(d->status, oldStatus);
+    }
+
+    printf("New Room: ");
+    scanf("%s", d->room);
     toUpperCase(d->room);
 
-    printf("✅ Updated successfully!\n");
+    // ✅ Update power automatically if name changes
+    d->power = getPower(d->name);
+
+    printf(" Device updated successfully!\n");
 }
 
 // ⚡ Total Power
@@ -179,19 +204,19 @@ void smartHomeControl(struct Device* root) {
 
 // 🔹 Run Smart System
 void runSmartSystem(struct Device* root) {
-    printf("\n🤖 Smart System Activated...\n");
+    printf("\n Smart System Activated...\n");
 
     smartHomeControl(root);
 
     int power = totalPower(root);
-    printf("⚡ Power Usage: %d units\n", power);
+    printf(" Power Usage: %d units\n", power);
 
-    printf("🌡 Temp: %d°C | %s | User: %s\n",
+    printf(" Temp: %d°C | %s | User: %s\n",
            currentTemp,
            isNight ? "Night" : "Day",
            isUserHome ? "Home" : "Outside");
 
-    printf("🏠 Devices adjusted automatically!\n");
+    printf("All Devices adjusted automatically!\n");
 }
 
 // 🚀 MAIN
@@ -223,14 +248,14 @@ int main() {
                 toUpperCase(status);
 
                 if (strcmp(status,"ON")!=0 && strcmp(status,"OFF")!=0){
-                    printf("❌ Invalid status!\n"); break;
+                    printf(" Invalid status!\n"); break;
                 }
 
                 printf("Room: "); scanf("%s", room);
                 toUpperCase(room);
 
                 power = getPower(name);
-                printf("⚡ Power assigned: %d\n", power);
+                printf(" Power assigned: %d\n", power);
 
                 root = insert(root, id, name, status, room, power);
                 break;
@@ -249,17 +274,18 @@ int main() {
                 printf("ID: "); scanf("%d", &id);
                 struct Device* d = search(root, id);
                 if (d)
-                    printf("✅ Found -> ID:%d | %s | %s | %s\n",
+                    printf(" Found -> ID:%d | %s | %s | %s\n",
                            d->id, d->name, d->status, d->room);
                 else
-                    printf("❌ Not found!\n");
+                    printf(" Not found!\n");
                 break;
             }
 
             case 5:
-                printf("\nID | Name   | Sts | Room     | Power\n");
-                printf("--------------------------------------\n");
+                printf("\nID | Name           | Sts | Room       | Power\n");
+                printf("------------------------------------------------\n");
                 display(root);
+                printf("\n");
                 break;
 
             case 6:
