@@ -96,21 +96,31 @@ gcc main.c -o project
 ==== SMART HOME MENU ====
 
 1.Add
+
 2.Delete
+
 3.Update
+
 4.Search
+
 5.Display
+
 6.Smart System
+
 7.Exit
 
 Smart System Activated...
+
 Power Usage: 35 units
+
 Temp: 28°C | Night | User: Home
+
 All devices adjusted automatically!
 
-##Demo Video
+##  Demo Video
 
- Upload your demo video to Google Drive and paste the link below:
+Upload your demo video to Google Drive and paste the link below:
+
 [Add your Google Drive link here]
 
  Note: Keep access set to private or restricted as per instructions.
