@@ -119,7 +119,10 @@ All devices adjusted automatically!
 
 ## Output Screenshots
 
+Display Menu
+
 <img width="203" height="181" alt="image" src="https://github.com/user-attachments/assets/bb63b1e2-674e-4f97-8515-a49998d2908e" />
+
 
 <img width="233" height="269" alt="image" src="https://github.com/user-attachments/assets/4e41fb9a-a9de-491d-a5ec-5973d609d931" />
 
