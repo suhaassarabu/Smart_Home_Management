@@ -7,7 +7,7 @@ In addition to basic CRUD operations, the system includes smart automation featu
 
 ---
 
-## ❗ Problem Statement
+##  ❗ Problem Statement
 Managing multiple smart home devices manually can be inefficient, time-consuming, and lead to unnecessary power consumption.
 
 This project provides a structured and intelligent system to:
@@ -17,14 +17,14 @@ This project provides a structured and intelligent system to:
 
 ---
 
-## 👨‍💻 Team Members
+##  👨‍💻 Team Members
 - Suhaas Sarabu  
 - Vishnu Polamera  
 
 ---
 
-## 🧠 Data Structure Used
-### Binary Search Tree (BST)
+##  🧠 Data Structure Used
+###  Binary Search Tree (BST)
 - Left subtree → Devices with smaller IDs  
 - Right subtree → Devices with larger IDs  
 - Provides efficient operations (average O(log n))
