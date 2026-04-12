@@ -1,13 +1,13 @@
-#  🚀 Smart Home Management using Device Control Tree (CRUD in C)
+#  Smart Home Management using Device Control Tree (CRUD in C)
 
-##  📌 Project Overview
+##  Project Overview
 This project implements a Smart Home Management System using the C programming language. It utilizes a Binary Search Tree (BST) to efficiently manage and control smart devices like AC, Fan, Light, TV, and more.
 
 In addition to basic CRUD operations, the system includes smart automation features that automatically control devices based on environmental conditions such as temperature, time (day/night), and user presence.
 
 ---
 
-##  ❗ Problem Statement
+##  Problem Statement
 Managing multiple smart home devices manually can be inefficient, time-consuming, and lead to unnecessary power consumption.
 
 This project provides a structured and intelligent system to:
@@ -17,13 +17,13 @@ This project provides a structured and intelligent system to:
 
 ---
 
-##  👨‍💻 Team Members
+##  Team Members
 - Suhaas Sarabu  
 - Vishnu Polamera  
 
 ---
 
-##  🧠 Data Structure Used
+##  Data Structure Used
 ###  Binary Search Tree (BST)
 - Left subtree → Devices with smaller IDs  
 - Right subtree → Devices with larger IDs  
@@ -31,9 +31,9 @@ This project provides a structured and intelligent system to:
 
 ---
 
-## ⚙️ Features
+##  Features
 
-### 🔹 CRUD Operations
+###  CRUD Operations
 - Create – Add a new device  
 - Read – Display all devices in sorted order  
 - Update – Modify device details with validation  
@@ -42,7 +42,7 @@ This project provides a structured and intelligent system to:
 
 ---
 
-### 🤖 Smart Automation
+###  Smart Automation
 - Automatically controls AC based on temperature  
 - Controls fan based on room temperature  
 - Turns lights ON/OFF based on day/night  
@@ -52,21 +52,21 @@ This project provides a structured and intelligent system to:
 
 ---
 
-### ⚡ Intelligent Power Management
+###  Intelligent Power Management
 - Automatic power assignment for devices  
 - Real-time total power calculation  
 - Helps simulate electricity optimization  
 
 ---
 
-### 🔐 Input Handling & Validation
+###  Input Handling & Validation
 - Converts input to uppercase (case-insensitive)  
 - Validates status (only ON/OFF allowed)  
 - Safe update using backup to prevent invalid data  
 
 ---
 
-## 🧩 Algorithm Explanation
+##  Algorithm Explanation
 - Devices are stored as nodes in a Binary Search Tree  
 - Insertion follows BST rules based on device ID  
 - Inorder traversal displays devices in sorted order  
@@ -75,7 +75,7 @@ This project provides a structured and intelligent system to:
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 - C Programming Language  
 - Structures (struct)  
 - Pointers  
@@ -84,11 +84,12 @@ This project provides a structured and intelligent system to:
 
 ---
 
-## ▶️ Compilation & Execution
+##  Compilation & Execution
 
 ```bash
 gcc main.c -o project
 ./project
+```
 
 ## Sample Output
 
@@ -108,10 +109,10 @@ All devices adjusted automatically!
 
 ##Demo Video
 
-👉 Upload your demo video to Google Drive and paste the link below:
+ Upload your demo video to Google Drive and paste the link below:
 [Add your Google Drive link here]
 
-⚠ Note: Keep access set to private or restricted as per instructions.
+ Note: Keep access set to private or restricted as per instructions.
 
 ## Conclusion
 
