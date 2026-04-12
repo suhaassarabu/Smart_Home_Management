@@ -94,6 +94,7 @@ gcc main.c -o project
 ## Sample Output
 
 ==== SMART HOME MENU ====
+
 1.Add
 2.Delete
 3.Update
