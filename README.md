@@ -1,6 +1,6 @@
-# 🚀 Smart Home Management using Device Control Tree (CRUD in C)
+#  🚀 Smart Home Management using Device Control Tree (CRUD in C)
 
-## 📌 Project Overview
+##  📌 Project Overview
 This project implements a Smart Home Management System using the C programming language. It utilizes a Binary Search Tree (BST) to efficiently manage and control smart devices like AC, Fan, Light, TV, and more.
 
 In addition to basic CRUD operations, the system includes smart automation features that automatically control devices based on environmental conditions such as temperature, time (day/night), and user presence.
