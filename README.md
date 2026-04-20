@@ -173,7 +173,7 @@ Exiting from the menu
 
 ##  Demo Video
 
-https://www.linkedin.com/in/suhaas-sarabu-5a52773ab/
+
 
 ## Conclusion
 
