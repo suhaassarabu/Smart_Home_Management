@@ -173,11 +173,7 @@ Exiting from the menu
 
 ##  Demo Video
 
-Upload your demo video to Google Drive and paste the link below:
-
-[Add your Google Drive link here]
-
- Note: Keep access set to private or restricted as per instructions.
+https://www.linkedin.com/in/suhaas-sarabu-5a52773ab/
 
 ## Conclusion
 
