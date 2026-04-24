@@ -84,21 +84,20 @@ This project provides a structured and intelligent system to:
 
 ---
 
-##  Compilation & Execution
+## Compilation & Execution
 
-### windows command 
-
-'''bash
-gcc smart_home_management.c
+### Windows Command
+```bash
+gcc smart_home_management.c -o smart_home
 ./a.exe
-'''
+```
 
 ### linux command 
 
-'''bash
+```bash
 gcc smart_home_management.c
 ./a.out
-'''
+```
 
 ## Sample Output
 
